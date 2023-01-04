@@ -1,0 +1,7 @@
+version: '2.7'
+
+server:
+  command: php app.php
+
+ticker:
+  interval: 1s
