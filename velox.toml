@@ -1,0 +1,20 @@
+[velox]
+build_args = ['-trimpath', '-ldflags', '-s -X github.com/roadrunner-server/roadrunner/v2/internal/meta.version=${VERSION} -X github.com/roadrunner-server/roadrunner/v2/internal/meta.buildTime=${TIME}']
+
+[roadrunner]
+ref = "v2.12.1"
+
+[github]
+    [github.token]
+    token = "${RT_TOKEN}"
+
+    # ref -> master, commit or tag
+    [github.plugins]
+    logger = { ref = "master", owner = "roadrunner-server", repository = "logger" }
+    server = { ref = "master", owner = "roadrunner-server", repository = "server" }
+    ticker = { ref = "main", owner = "roadrunner-php", repository = "rr-examples", folder="ticker" }
+
+
+[log]
+level = "debug"
+mode = "development"
