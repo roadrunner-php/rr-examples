@@ -1,1 +1,6 @@
-.idea
+/.*/
+!/.github/
+/runtime/
+/vendor/
+/.env
+*.log
